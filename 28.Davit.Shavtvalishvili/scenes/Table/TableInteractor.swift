@@ -49,7 +49,6 @@ extension TableInteractor: TableBusinessLogic {
         Task {
             do {
                 let countries = try await worker.fetchCountries()
-//                let countries = [Country(name: "offliename", capital: "offlinecap", population: 9, latlng: [41.7,44.8])]
                 DispatchQueue.main.async { [weak self] in
                     self?.countries = countries
                     self?.presenter.presentCountries(response: Table.GetCountries.Response(data: countries))

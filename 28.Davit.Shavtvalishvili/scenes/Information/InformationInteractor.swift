@@ -53,8 +53,7 @@ extension InformationInteractor: InformationBusinessLogic {
                 DispatchQueue.main.async { [weak self] in
                     self?.presenter.presentWeather(response: CountryDetails.GetWeather.Response(data: weather))
                 }
-            } catch {
-                print(error) }
+            } catch { print(error) }
         }
     }
 }

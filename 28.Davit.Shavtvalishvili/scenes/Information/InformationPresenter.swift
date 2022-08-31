@@ -33,6 +33,7 @@ extension InformationPresenter: InformationPresentationLogic {
         var temperature = "Peak Temp: \(weather.temp_max) F Current Temp: \(weather.temp) F Minimum Temp: \(weather.temp_min) F"
         if weather.temp_min == weather.temp_min { temperature = "Current Temperature: \(weather.temp) F"}
         let humidity = "Humidity: \(weather.humidity)"
+        
         viewController?.displayWeather(viewModel: CountryDetails.ShowCountryWeather.ViewModel(temp: temperature, humidity: humidity))
     }
     
